@@ -1,37 +1,206 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Knowledge Discovery and Web Mining Lab by KnowledgeDiscoveryAndWebMiningLab</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Knowledge Discovery and Web Mining Lab</h1>
-      <h2 class="project-tagline">University of Louisville</h2>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    (function () {
+      try {
+        if (sessionStorage.getItem('kdwmHeroPlayed') === 'true') {
+          document.documentElement.classList.add('hero-intro-seen');
+        } else {
+          sessionStorage.setItem('kdwmHeroPlayed', 'true');
+        }
+      } catch (error) {
+      }
+    }());
+  </script>
+  <link rel="stylesheet" href="stylesheets/animation.css">
+  <link rel="stylesheet" href="stylesheets/stylesheet.css">
+  <title>KDWM Lab</title>
+
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="flower">
+      <div class="petal" style="
+          --i: 0;
+          --angle: 180deg;
+          --height: 330px;
+          --color: #ff3b18;
+        ">
+      </div>
+
+      <div class="petal" style="
+          --i: 1;
+          --angle: 165deg;
+          --height: 390px;
+          --color: #ff7a00;
+        ">
+      </div>
+
+      <div class="petal" style="
+          --i: 2;
+          --angle: 150deg;
+          --height: 440px;
+          --color: #ffd500;
+        ">
+      </div>
+
+      <div class="petal" style="
+          --i: 3;
+          --angle: 135deg;
+          --height: 470px;
+          --color: #b6e400;
+        ">
+      </div>
+
+      <div class="petal" style="
+          --i: 4;
+          --angle: 120deg;
+          --height: 500px;
+          --color: #53d500;
+        ">
+      </div>
+
+      <div class="petal" style="
+          --i: 5;
+          --angle: 105deg;
+          --height: 520px;
+          --color: #00ca59;
+        ">
+      </div>
+
+      <div class="petal" style="
+          --i: 6;
+          --angle: 90deg;
+          --height: 540px;
+          --color: #00b7a3;
+        ">
+      </div>
+
+      <div class="petal" style="
+          --i: 7;
+          --angle: 75deg;
+          --height: 520px;
+          --color: #00a7dd;
+        ">
+      </div>
+
+      <div class="petal" style="
+          --i: 8;
+          --angle: 60deg;
+          --height: 500px;
+          --color: #168cff;
+        ">
+      </div>
+
+      <div class="petal" style="
+          --i: 9;
+          --angle: 45deg;
+          --height: 470px;
+          --color: #4d5cff;
+        ">
+      </div>
+
+      <div class="petal" style="
+          --i: 10;
+          --angle: 30deg;
+          --height: 440px;
+          --color: #7e35e8;
+        ">
+      </div>
+
+      <div class="petal" style="
+          --i: 11;
+          --angle: 15deg;
+          --height: 390px;
+          --color: #d32bcf;
+        ">
+      </div>
+
+      <div class="petal" style="
+          --i: 12;
+          --angle: 0deg;
+          --height: 330px;
+          --color: #ef337d;
+        ">
+      </div>
+
+      <div class="flower-center"></div>
+
+    </div>
+
+
+    <div class="hero-content">
+      <h1>
+        <span class="sheen-word">Knowledge</span> <span class="sheen-word">Discovery</span><br>
+        <span class="sheen-word">&amp;</span> <span class="sheen-word">Web</span> <span class="sheen-word">Mining</span> <span class="sheen-word">Lab</span>
+      </h1>
+      <img class="hero-logo" src="public/UL_oneline_whiteonblack-RGB.webp" alt="University of Louisville">
+    </div>
+  </section>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="html/team.html">Team</a>
+    <a href="html/research.html">Research</a>
+  </nav>
+
+  <main class="home-content">
+    <section class="content-section" id="about">
+      <h2 class="people-divider">About Us</h2>
+      <p>
+        We conduct research to advance the state of the art in Knowledge Discovery in Data sets (KDD), with an emphasis on Data Mining, Web Mining, and Stream Data Mining.
+      </p>
+      <p>
+        Our daily activities include learning, investigation, design, implementation, testing, and evaluation of efficient algorithms and techniques for challenging problems in web analytics, personalization, evolving data streams, and scalable information retrieval.
+      </p>
     </section>
 
-    <section class="main-content">
-      <p>We conduct research to advance state of the art in the area of Knowledge Discovery in Data sets (KDD), with an emphasis on Data Mining, and in particular Web Mining and Stream Data Mining. Our daily activities consist of learning, investigation, design, implementation, testing, and evaluation of efficient algorithms and techniques to solve challenging problems in support of a variety of applications, such as:</p>
+    <section class="content-section" id="contact">
+      <h2 class="people-divider">Contact Us</h2>
+      <form
+        class="contact-form"
+        action="mailto:olfa.nasraoui@louisville.edu"
+        method="post"
+        enctype="text/plain"
+      >
+        <input type="hidden" name="subject" value="Message from KDWM Lab website">
 
-<ul>
-<li>Web analytics &amp; Web personalization for e-commerce and information retrieval</li>
-<li>Mining evolving data streams with an emphasis on evolving Web clickstreams</li>
-<li>Scalable and/or personalized information retrieval in data such as text and astronomical data sets</li>
-</ul>
+        <label>
+          Name
+          <input type="text" name="name" autocomplete="name" required>
+        </label>
 
-      <footer class="site-footer">
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
 
-        <span class="site-footer-credits">Copyright © 2015 <a href="http://webmining.spd.louisville.edu/">The Knowledge Discovery and Web Mining Lab</a></span>
-      </footer>
+        <label>
+          Message
+          <textarea name="message" rows="6" required></textarea>
+        </label>
 
+        <button type="submit">Send Email</button>
+      </form>
     </section>
+  </main>
 
-  
-  </body>
+  <footer class="site-footer">
+    <div class="quote-scroll">
+      <p>
+        Never doubt that a small group of thoughtful, committed people can change the world. Indeed, it is the only thing that ever has. ~ Margaret Mead
+      </p>
+    </div>
+  </footer>
+
+</body>
+
 </html>
-

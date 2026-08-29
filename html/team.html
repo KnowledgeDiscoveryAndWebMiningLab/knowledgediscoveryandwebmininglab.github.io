@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../stylesheets/animation.css">
+  <link rel="stylesheet" href="../stylesheets/stylesheet.css">
+  <title>Team | KDWM Lab</title>
+</head>
+
+<body>
+  <section class="hero hero-compact">
+    <div class="flower">
+      <div class="petal" style="--i: 0; --angle: 180deg; --height: 330px; --color: #ff3b18;"></div>
+      <div class="petal" style="--i: 1; --angle: 165deg; --height: 390px; --color: #ff7a00;"></div>
+      <div class="petal" style="--i: 2; --angle: 150deg; --height: 440px; --color: #ffd500;"></div>
+      <div class="petal" style="--i: 3; --angle: 135deg; --height: 470px; --color: #b6e400;"></div>
+      <div class="petal" style="--i: 4; --angle: 120deg; --height: 500px; --color: #53d500;"></div>
+      <div class="petal" style="--i: 5; --angle: 105deg; --height: 520px; --color: #00ca59;"></div>
+      <div class="petal" style="--i: 6; --angle: 90deg; --height: 540px; --color: #00b7a3;"></div>
+      <div class="petal" style="--i: 7; --angle: 75deg; --height: 520px; --color: #00a7dd;"></div>
+      <div class="petal" style="--i: 8; --angle: 60deg; --height: 500px; --color: #168cff;"></div>
+      <div class="petal" style="--i: 9; --angle: 45deg; --height: 470px; --color: #4d5cff;"></div>
+      <div class="petal" style="--i: 10; --angle: 30deg; --height: 440px; --color: #7e35e8;"></div>
+      <div class="petal" style="--i: 11; --angle: 15deg; --height: 390px; --color: #d32bcf;"></div>
+      <div class="petal" style="--i: 12; --angle: 0deg; --height: 330px; --color: #ef337d;"></div>
+      <div class="flower-center"></div>
+    </div>
+
+    <div class="hero-content">
+      <h1>
+        <span class="sheen-word">Knowledge</span> <span class="sheen-word">Discovery</span><br>
+        <span class="sheen-word">&amp;</span> <span class="sheen-word">Web</span> <span class="sheen-word">Mining</span> <span class="sheen-word">Lab</span>
+      </h1>
+      <img
+        class="hero-logo"
+        src="../public/UL_oneline_whiteonblack-RGB.webp"
+        alt="University of Louisville"
+      >
+    </div>
+  </section>
+
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="team.html">Team</a>
+    <a href="research.html">Research</a>
+  </nav>
+
+  <main id="people" class="people-list" aria-label="Team members"></main>
+
+  <footer class="site-footer">
+    <div class="quote-scroll">
+      <p>
+        Never doubt that a small group of thoughtful, committed people can change the world. Indeed, it is the only thing that ever has. ~ Margaret Mead
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const peopleList = document.querySelector('#people');
+
+    function getInitials(name) {
+      return name
+        .split(' ')
+        .filter(Boolean)
+        .map((part) => part.charAt(0))
+        .join('')
+        .slice(0, 2);
+    }
+
+    function addText(parent, tagName, className, text) {
+      const element = document.createElement(tagName);
+      element.className = className;
+      element.textContent = text;
+      parent.appendChild(element);
+    }
+
+    function resolveImagePath(path) {
+      if (/^(https?:)?\/\//.test(path) || path.startsWith('data:')) {
+        return path;
+      }
+
+      return new URL(`../${path.replace(/^\.?\//, '')}`, window.location.href).href;
+    }
+
+    function createPersonBlock(person) {
+      const block = document.createElement('article');
+      block.className = 'person-block';
+
+      const imageWrap = document.createElement('div');
+      imageWrap.className = 'person-image';
+
+      if (person.image) {
+        const image = document.createElement('img');
+        image.src = resolveImagePath(person.image);
+        image.alt = person.name;
+        image.loading = 'lazy';
+        image.addEventListener('error', () => {
+          image.remove();
+          imageWrap.textContent = getInitials(person.name);
+        });
+        imageWrap.appendChild(image);
+      } else {
+        imageWrap.textContent = getInitials(person.name);
+      }
+
+      const details = document.createElement('div');
+      details.className = 'person-details';
+
+      addText(details, 'h2', 'person-name', person.name);
+      addText(details, 'p', 'person-role', person.role);
+      addText(details, 'p', 'person-date', person.date);
+      addText(details, 'p', 'person-bio', person.bio);
+
+      block.appendChild(imageWrap);
+      block.appendChild(details);
+
+      return block;
+    }
+
+    function createPeopleSection(title, people) {
+      const section = document.createElement('section');
+      section.className = 'people-section';
+
+      const heading = document.createElement('h2');
+      heading.className = 'people-divider';
+      heading.textContent = title;
+      section.appendChild(heading);
+
+      if (people.length === 0) {
+        addText(section, 'p', 'people-empty', 'No members listed yet.');
+      } else {
+        people.forEach((person) => {
+          section.appendChild(createPersonBlock(person));
+        });
+      }
+
+      return section;
+    }
+
+    fetch('../teams_data.json')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Unable to load team data.');
+        }
+
+        return response.json();
+      })
+      .then((data) => {
+        peopleList.appendChild(createPeopleSection('Current Members', data.current || []));
+        peopleList.appendChild(createPeopleSection('Past Members', data.alumni || []));
+      })
+      .catch(() => {
+        addText(peopleList, 'p', 'people-error', 'Team information is unavailable right now.');
+      });
+  </script>
+</body>
+</html>

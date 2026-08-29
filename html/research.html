@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylesheets/animation.css">
+    <link rel="stylesheet" href="../stylesheets/stylesheet.css">
+    <title>Research | KDWM Lab</title>
+</head>
+
+<body>
+    <section class="hero hero-compact">
+        <div class="flower">
+            <div class="petal" style="--i: 0; --angle: 180deg; --height: 330px; --color: #ff3b18;"></div>
+            <div class="petal" style="--i: 1; --angle: 165deg; --height: 390px; --color: #ff7a00;"></div>
+            <div class="petal" style="--i: 2; --angle: 150deg; --height: 440px; --color: #ffd500;"></div>
+            <div class="petal" style="--i: 3; --angle: 135deg; --height: 470px; --color: #b6e400;"></div>
+            <div class="petal" style="--i: 4; --angle: 120deg; --height: 500px; --color: #53d500;"></div>
+            <div class="petal" style="--i: 5; --angle: 105deg; --height: 520px; --color: #00ca59;"></div>
+            <div class="petal" style="--i: 6; --angle: 90deg; --height: 540px; --color: #00b7a3;"></div>
+            <div class="petal" style="--i: 7; --angle: 75deg; --height: 520px; --color: #00a7dd;"></div>
+            <div class="petal" style="--i: 8; --angle: 60deg; --height: 500px; --color: #168cff;"></div>
+            <div class="petal" style="--i: 9; --angle: 45deg; --height: 470px; --color: #4d5cff;"></div>
+            <div class="petal" style="--i: 10; --angle: 30deg; --height: 440px; --color: #7e35e8;"></div>
+            <div class="petal" style="--i: 11; --angle: 15deg; --height: 390px; --color: #d32bcf;"></div>
+            <div class="petal" style="--i: 12; --angle: 0deg; --height: 330px; --color: #ef337d;"></div>
+            <div class="flower-center"></div>
+        </div>
+
+        <div class="hero-content">
+            <h1>
+                <span class="sheen-word">Knowledge</span> <span class="sheen-word">Discovery</span><br>
+                <span class="sheen-word">&amp;</span> <span class="sheen-word">Web</span> <span
+                    class="sheen-word">Mining</span> <span class="sheen-word">Lab</span>
+            </h1>
+            <img class="hero-logo" src="../public/UL_oneline_whiteonblack-RGB.webp" alt="University of Louisville">
+        </div>
+    </section>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="team.html">Team</a>
+        <a href="research.html">Research</a>
+    </nav>
+
+    <main id="research" class="research-list" aria-label="Research"></main>
+
+    <footer class="site-footer">
+        <div class="quote-scroll">
+            <p>
+                Never doubt that a small group of thoughtful, committed people can change the world. Indeed, it is the
+                only thing that ever has. ~ Margaret Mead
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const researchList = document.querySelector('#research');
+
+        function addText(parent, tagName, className, text) {
+            const element = document.createElement(tagName);
+            element.className = className;
+            element.textContent = text;
+            parent.appendChild(element);
+            return element;
+        }
+
+        function resolveAssetPath(path) {
+            if (!path || /^(https?:)?\/\//.test(path) || path.startsWith('data:')) {
+                return path;
+            }
+
+            return new URL(`../${path.replace(/^\.?\//, '')}`, window.location.href).href;
+        }
+
+        function createSection(title) {
+            const section = document.createElement('section');
+            section.className = 'research-section';
+            addText(section, 'h2', 'people-divider', title);
+            return section;
+        }
+
+        function createPublicationList(publications) {
+            const list = document.createElement('ol');
+            list.className = 'publication-list';
+
+            if (publications.length === 0) {
+                addText(list, 'li', 'research-empty', 'No publications listed yet.');
+            } else {
+                publications.forEach((publication) => {
+                    const item = document.createElement('li');
+                    item.className = 'publication-item';
+
+                    const anchor = document.createElement('a');
+                    anchor.href = publication.link;
+                    anchor.textContent = publication.citation;
+                    anchor.target = '_blank';
+                    anchor.rel = 'noopener noreferrer';
+
+                    item.appendChild(anchor);
+                    list.appendChild(item);
+                });
+            }
+
+            return list;
+        }
+
+        function createGrantBlock(grant) {
+            const block = document.createElement('article');
+            block.className = 'grant-block';
+
+            const provider = document.createElement('div');
+            provider.className = 'grant-provider';
+
+            if (grant.providerImage) {
+                const image = document.createElement('img');
+                image.src = resolveAssetPath(grant.providerImage);
+                image.alt = grant.provider || 'Grant provider';
+                image.loading = 'lazy';
+                provider.appendChild(image);
+            }
+
+            const details = document.createElement('div');
+            details.className = 'grant-details';
+
+            addText(details, 'h3', 'grant-name', grant.name);
+            addText(details, 'p', 'grant-provider-name', grant.provider);
+
+            const meta = document.createElement('dl');
+            meta.className = 'grant-meta';
+
+            addText(meta, 'dt', '', 'Date');
+            addText(meta, 'dd', '', grant.date);
+            addText(meta, 'dt', '', 'Role');
+            addText(meta, 'dd', '', grant.role);
+            addText(meta, 'dt', '', 'Award No.');
+            addText(meta, 'dd', '', grant.awardNo);
+            addText(meta, 'dt', '', 'Amount');
+            addText(meta, 'dd', '', grant.amount);
+            details.appendChild(meta);
+
+            if (grant.investigators) {
+                addText(details, 'p', 'grant-investigators', grant.investigators);
+            }
+
+            if (grant.description) {
+                addText(details, 'p', 'grant-description', grant.description);
+            }
+
+            const related = document.createElement('details');
+            related.className = 'related-publications';
+
+            addText(related, 'summary', '', 'Related Publications');
+            related.appendChild(createPublicationList(grant.related_publications || []));
+            details.appendChild(related);
+
+            block.appendChild(provider);
+            block.appendChild(details);
+
+            return block;
+        }
+
+        fetch('../research_data.json')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Unable to load research data.');
+                }
+
+                return response.json();
+            })
+            .then((data) => {
+                const publicationsSection = createSection('Recent Publications');
+                publicationsSection.appendChild(createPublicationList(data.recent_publications || []));
+                researchList.appendChild(publicationsSection);
+
+                const grantsSection = createSection('Grants');
+                const grants = data.grants || [];
+
+                if (grants.length === 0) {
+                    addText(grantsSection, 'p', 'research-empty', 'No grants listed yet.');
+                } else {
+                    grants.forEach((grant) => {
+                        grantsSection.appendChild(createGrantBlock(grant));
+                    });
+                }
+
+                researchList.appendChild(grantsSection);
+            })
+            .catch(() => {
+                addText(researchList, 'p', 'people-error', 'Research information is unavailable right now.');
+            });
+    </script>
+</body>
+
+</html>

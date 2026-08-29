@@ -1,0 +1,47 @@
+{
+  "current": [
+    {
+      "name": "Olfa Nasraoui, PhD",
+      "role": "Founder and PI",
+      "date": "1999-present",
+      "bio": "Professor of Computer Science and Engineering, Endowed Chair of E-commerce and the founding director of the Knowledge Discovery & Web Mining Lab at University of Louisville. She received her Ph.D in Computer Engineering and Computer Science from the University of Missouri-Columbia.",
+      "image": "public/team_images/olfa.jpeg"
+    },
+    {
+      "name": "Kyle Spurlock",
+      "role": "PhD Student",
+      "date": "2021-present",
+      "bio": "Bio coming soon.",
+      "image": "public/team_images/kyle.jpg"
+    },
+    {
+      "name": "Sami Alsheri",
+      "role": "PhD Student",
+      "date": "2022-present",
+      "bio": "Bio coming soon.",
+      "image": "public/team_images/sami.jpg"
+    },
+    {
+      "name": "Nicholas Johnson",
+      "role": "PhD Student",
+      "date": "2023-present",
+      "bio": "Bio coming soon.",
+      "image": ""
+    },
+    {
+      "name": "Richard Douglas",
+      "role": "PhD Student",
+      "date": "2025-present",
+      "bio": "Bio coming soon.",
+      "image": "public/team_images/richard.jpg"
+    },
+    {
+      "name": "Rupa Ghosh",
+      "role": "PhD Student",
+      "date": "2025-present",
+      "bio": "Bio coming soon.",
+      "image": ""
+    }
+  ],
+  "alumni": []
+}

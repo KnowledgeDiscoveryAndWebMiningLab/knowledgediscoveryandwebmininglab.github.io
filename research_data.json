@@ -1,0 +1,65 @@
+{
+  "recent_publications": [
+    {"link": "https://ieeexplore.ieee.org/abstract/document/11416053/", "citation": "Livers, J., Johnson, N., Spurlock, K., & Nasraoui, O. (2025, November). When Splits Matter: Interpreting Disaster Tweet Classification Models. In 2025 IEEE International Conference on Data Mining Workshops (ICDMW) (pp. 2844-2851). IEEE." },
+    {"link": "https://ieeexplore.ieee.org/abstract/document/11164103/", "citation": "Acun, C., Ashary, A., Popa, D. O., & Nasraoui, O. (2025, August). Task Allocation for Nursing Robots Using Explainable Machine Learning with Factorization Machines. In 2025 IEEE 21st International Conference on Automation Science and Engineering (CASE) (pp. 1044-1049). IEEE."},
+    {"link": "https://arxiv.org/abs/2507.05165", "citation": "Munia, N., Zhu, J., Nasraoui, O., & Imran, A. A. Z. (2025). Differential attention for multimodal crisis event analysis. arXiv preprint arXiv:2507.05165."},
+    {"link": "https://www.mdpi.com/2076-3417/15/13/7544", "citation":"Acun, C., & Nasraoui, O. (2025). Pre Hoc and Co Hoc Explainability: Frameworks for Integrating Interpretability into Machine Learning Training for Enhanced Transparency and Performance. Applied Sciences, 15(13), 7544."}
+  ],
+  "grants": [
+    {
+      "name": "Climate Resilience through Multidisciplinary Big Data Learning, Prediction & Building Response Systems",
+      "date": "7/1/24-6/30/29",
+      "role": "Olfa Nasraoui (Co-PI)",
+      "awardNo": "2344533",
+      "amount": "$20,000,000",
+      "provider": "National Science Foundation (NSF)",
+      "providerImage": "public/nsf.png",
+      "related_publications": [
+        "Citation coming soon.",
+        "Citation coming soon."
+      ]
+    },
+    {
+      "name": "MRI: Acquisition of a High Performance Big Data Analysis Platform",
+      "date": "10/1/2018-9/30/2020",
+      "role": "Olfa Nasraoui (Co-PI)",
+      "awardNo": "1828521",
+      "amount": "$478,727",
+      "provider": "National Science Foundation (NSF)",
+      "providerImage": "public/nsf.png",
+      "description": "*In collaboration with PI Nihat Altiparmak and Co-PIs Ayman El-baz, Bert Little, Nejat Egilmez, and Senior Personnel Robert Keynton, Hichem Frigui, Richard Kerber, and Karunarathna Kulasekera at the University of Louisville.",
+      "related_publications": []
+    },
+    {
+      "name": "RET Site: Research Experiences for Teachers in Big Data and Data Science",
+      "date": "2/15/2018-1/31/2021",
+      "role": "Olfa Nasraoui (PI)",
+      "awardNo": "1801513",
+      "amount": "$598,128",
+      "provider": "National Science Foundation (NSF)",
+      "providerImage": "public/nsf.png",
+      "description": "*In collaboration with Co-PI Stephanie Philipp, and Senior Personnel Nihat Altiparmak, Jason Immekus, Dan Popa, Aly Farag, Hichem Frigui, Huacheng Zeng, and Hui Zhang at the University of Louisville.",
+      "related_publications": []
+    },
+    {
+      "name": "Logistics Sourcing Model",
+      "date": "1/1/2017-9/30/2017",
+      "role": "Olfa Nasraoui (Co-PI)",
+      "amount": "$175,000",
+      "provider": "OMYA, Inc.",
+      "providerImage": "public/omya.png",
+      "description": "*In collaboration with PI Monica Gentili and Co-PIs Nihat Altiparmak and Kevin Gue at the University of Louisville.",
+      "related_publications": []
+    },
+    {
+      "name": "Big Data Analysis in Medicine",
+      "date": "1/1/2017-12/31/2019",
+      "role": "Olfa Nasraoui (Co-PI)",
+      "amount": "$1,857,444",
+      "provider": "University of Louisville, 21st Century Initiative",
+      "providerImage": "public/UL-seal-red-RGB.webp",
+      "description": "*In collaboration with PIs Robert S. Keynton and Ayman El-Baz, and Co-PIs Nihat Altiparmak, Gregory N. Barnes, Roberto Bolli, Nigel Cooper, Hichem Frigui, Henry J. Kaplan, Eric Rouchka, and Mark Slaughter at University of Louisville.",
+      "related_publications": []
+    }
+  ]
+}

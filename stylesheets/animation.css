@@ -1,0 +1,493 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #050505;
+    background: white;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    height: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+
+    animation: hero-to-banner 900ms ease-in-out 3900ms forwards;
+}
+
+/* --------------------------
+       Flower
+       -------------------------- */
+
+.flower {
+    position: absolute;
+
+    left: 50%;
+    bottom: -40px;
+
+    width: min(1000px, 100vw);
+    height: 600px;
+
+    transform: translateX(-50%);
+    animation: flower-to-banner 900ms ease-in-out 3900ms forwards;
+}
+
+.petal {
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 180px;
+    height: var(--height, 420px);
+
+    /*
+        Every petal rotates around the same point:
+        bottom-center.
+      */
+    transform-origin: 50% 100%;
+
+    /*
+        Our conceptual angle goes:
+
+          180° = left
+           90° = straight up
+            0° = right
+
+        CSS rotation is offset by 90 degrees,
+        hence:
+
+          90deg - angle
+      */
+    transform:
+        translateX(-50%) rotate(calc(90deg - var(--angle))) scaleY(0);
+
+    opacity: 0;
+
+    background:
+        linear-gradient(to right,
+            color-mix(in srgb, var(--color), transparent 15%),
+            var(--color));
+
+    /*
+        Geometric petal shape similar to the logo.
+      */
+    clip-path: polygon(50% 0%,
+            100% 42%,
+            78% 100%,
+            22% 100%,
+            0% 42%);
+
+    animation: unfurl 850ms cubic-bezier(.2, .8, .2, 1) forwards;
+
+    /*
+        This is what makes them appear
+        one after another.
+      */
+    animation-delay: calc(var(--i) * 90ms);
+}
+
+@keyframes unfurl {
+    0% {
+        transform:
+            translateX(-50%) rotate(calc(90deg - var(--angle))) scaleY(0);
+
+        opacity: 0;
+    }
+
+    70% {
+        transform:
+            translateX(-50%) rotate(calc(90deg - var(--angle))) scaleY(1.04);
+
+        opacity: 0.82;
+    }
+
+    100% {
+        transform:
+            translateX(-50%) rotate(calc(90deg - var(--angle))) scaleY(1);
+
+        opacity: 0.82;
+    }
+}
+
+/* Center of the flower */
+
+.flower-center {
+    position: absolute;
+
+    left: 50%;
+    bottom: -75px;
+
+    width: 260px;
+    height: 180px;
+
+    transform: translateX(-50%);
+
+    background: #d78b00;
+
+    border-radius: 50% 50% 0 0;
+
+    z-index: 20;
+}
+
+/* --------------------------
+       Hero text
+       -------------------------- */
+
+.hero-content {
+    position: relative;
+    z-index: 30;
+
+    text-align: center;
+    bottom: -80px;
+
+    margin-bottom: 0px;
+    padding: 20px;
+
+    font-family: Georgia, serif;
+    font-style: italic;
+
+    width: min(1200px, 100%);
+
+    animation: hero-content-to-banner 900ms ease-in-out 3900ms forwards;
+}
+
+.hero h1 {
+    margin: 0;
+    padding: 20px 10px 0;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    line-height: 0.95;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(18px);
+    animation:
+        fade-in-title 900ms ease-out 900ms forwards,
+        title-to-banner 900ms ease-in-out 3900ms forwards;
+}
+
+@supports ((background-clip: text) or (-webkit-background-clip: text)) {
+    html:not(.hero-intro-seen) .hero:not(.hero-compact) .sheen-word {
+        display: inline-block;
+        color: transparent;
+        background-image:
+            linear-gradient(105deg,
+                #050505 0%,
+                #050505 38%,
+                #ffffff 47%,
+                #ad0000 50%,
+                #ffffff 53%,
+                #050505 62%,
+                #050505 100%);
+        background-size: 260% 100%;
+        background-position: 140% 0;
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: word-sheen 850ms ease-out forwards;
+        animation-delay: calc(1500ms + (var(--sheen-index) * 250ms));
+    }
+}
+
+.sheen-word:nth-of-type(1) {
+    --sheen-index: 0;
+}
+
+.sheen-word:nth-of-type(2) {
+    --sheen-index: 1;
+}
+
+.sheen-word:nth-of-type(3) {
+    --sheen-index: 2;
+}
+
+.sheen-word:nth-of-type(4) {
+    --sheen-index: 3;
+}
+
+.sheen-word:nth-of-type(5) {
+    --sheen-index: 4;
+}
+
+.sheen-word:nth-of-type(6) {
+    --sheen-index: 5;
+}
+
+.hero-logo {
+    display: block;
+    width: min(420px, 72vw);
+    height: auto;
+    margin: 26px auto 0;
+    opacity: 0;
+    transform: translateY(14px);
+    animation:
+        fade-in-logo 900ms ease-out 1200ms forwards,
+        logo-to-banner 900ms ease-in-out 3900ms forwards;
+}
+
+.hero p {
+    margin-top: 24px;
+
+}
+
+@keyframes fade-in-title {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-logo {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hero-to-banner {
+    to {
+        height: 230px;
+    }
+}
+
+@keyframes word-sheen {
+    to {
+        background-position: -60% 0;
+    }
+}
+
+@keyframes flower-to-banner {
+    to {
+        bottom: -270px;
+        opacity: 0.45;
+        transform: translateX(-50%) scale(0.52);
+    }
+}
+
+@keyframes hero-content-to-banner {
+    to {
+        bottom: 0;
+        padding: 18px 20px 14px;
+    }
+}
+
+@keyframes title-to-banner {
+    to {
+        padding-top: 0;
+        font-size: clamp(1.65rem, 3vw, 2.5rem);
+        line-height: 1.05;
+    }
+}
+
+@keyframes logo-to-banner {
+    to {
+        width: min(260px, 52vw);
+        margin-top: 12px;
+    }
+}
+
+.hero-compact,
+.hero-intro-seen .hero {
+    height: 230px;
+    animation: none;
+}
+
+.hero-compact .flower,
+.hero-intro-seen .flower {
+    bottom: -270px;
+    animation: none;
+    opacity: 0.45;
+    transform: translateX(-50%) scale(0.52);
+}
+
+.hero-compact .petal,
+.hero-intro-seen .petal {
+    animation: none;
+    opacity: 0.82;
+    transform:
+        translateX(-50%) rotate(calc(90deg - var(--angle))) scaleY(1);
+}
+
+.hero-compact .hero-content,
+.hero-intro-seen .hero-content {
+    bottom: 0;
+    padding: 18px 20px 14px;
+    animation: none;
+}
+
+.hero-compact h1,
+.hero-intro-seen .hero h1 {
+    animation: none;
+    color: #050505;
+    background: none;
+    opacity: 1;
+    transform: none;
+    padding-top: 0;
+    font-size: clamp(1.65rem, 3vw, 2.5rem);
+    line-height: 1.05;
+}
+
+.hero-compact .sheen-word,
+.hero-intro-seen .sheen-word {
+    color: #050505;
+    background: none;
+    animation: none;
+}
+
+.hero-compact .hero-logo,
+.hero-intro-seen .hero-logo {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    width: min(260px, 52vw);
+    margin-top: 12px;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .hero {
+        height: 230px;
+        animation: none;
+    }
+
+    .flower {
+        bottom: -270px;
+        animation: none;
+        opacity: 0.45;
+        transform: translateX(-50%) scale(0.52);
+    }
+
+    .petal {
+        animation: none;
+
+        opacity: 0.82;
+
+        transform:
+            translateX(-50%) rotate(calc(90deg - var(--angle))) scaleY(1);
+    }
+
+    .hero h1 {
+        animation: none;
+        color: #050505;
+        background: none;
+        opacity: 1;
+        transform: none;
+        padding-top: 0;
+        font-size: clamp(1.65rem, 3vw, 2.5rem);
+        line-height: 1.05;
+    }
+
+    .hero h1 .sheen-word {
+        color: #050505;
+        background: none;
+        animation: none;
+    }
+
+    .hero-content {
+        bottom: 0;
+        padding: 18px 20px 14px;
+        animation: none;
+    }
+
+    .hero-logo {
+        animation: none;
+        opacity: 1;
+        transform: none;
+        width: min(260px, 52vw);
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .hero-compact,
+    .hero-intro-seen .hero {
+        height: 175px;
+    }
+
+    .hero-compact .flower,
+    .hero-intro-seen .flower {
+        bottom: -300px;
+        opacity: 0.4;
+        transform: translateX(-50%) scale(0.46);
+    }
+
+    .hero-compact h1,
+    .hero-intro-seen .hero h1 {
+        font-size: clamp(1.35rem, 7vw, 2rem);
+    }
+
+    .hero-compact .hero-logo,
+    .hero-intro-seen .hero-logo {
+        width: min(220px, 58vw);
+        margin-top: 10px;
+    }
+
+    @keyframes hero-to-banner {
+        to {
+            height: 175px;
+        }
+    }
+
+    @keyframes title-to-banner {
+        to {
+            padding-top: 0;
+            font-size: clamp(1.35rem, 7vw, 2rem);
+            line-height: 1.05;
+        }
+    }
+
+    @keyframes logo-to-banner {
+        to {
+            width: min(220px, 58vw);
+            margin-top: 10px;
+        }
+    }
+
+    @keyframes flower-to-banner {
+        to {
+            bottom: -300px;
+            opacity: 0.4;
+            transform: translateX(-50%) scale(0.46);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .hero {
+            height: 175px;
+        }
+
+        .flower {
+            bottom: -300px;
+            opacity: 0.4;
+            transform: translateX(-50%) scale(0.46);
+        }
+
+        .hero h1 {
+            font-size: clamp(1.35rem, 7vw, 2rem);
+        }
+
+        .hero-logo {
+            width: min(220px, 58vw);
+            margin-top: 10px;
+        }
+    }
+}
