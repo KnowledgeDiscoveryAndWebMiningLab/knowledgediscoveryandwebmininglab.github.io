@@ -19,7 +19,7 @@ body {
     position: relative;
     overflow: hidden;
 
-    animation: hero-to-banner 900ms ease-in-out 3900ms forwards;
+    animation: hero-to-banner 900ms ease-in-out 1600ms forwards;
 }
 
 /* --------------------------
@@ -36,7 +36,7 @@ body {
     height: 600px;
 
     transform: translateX(-50%);
-    animation: flower-to-banner 900ms ease-in-out 3900ms forwards;
+    animation: flower-to-banner 900ms ease-in-out 1600ms forwards;
 }
 
 .petal {
@@ -156,7 +156,7 @@ body {
 
     width: min(1200px, 100%);
 
-    animation: hero-content-to-banner 900ms ease-in-out 3900ms forwards;
+    animation: hero-content-to-banner 900ms ease-in-out 1600ms forwards;
 }
 
 .hero h1 {
@@ -169,7 +169,7 @@ body {
     transform: translateY(18px);
     animation:
         fade-in-title 900ms ease-out 900ms forwards,
-        title-to-banner 900ms ease-in-out 3900ms forwards;
+        title-to-banner 900ms ease-in-out 1600ms forwards;
 }
 
 @supports ((background-clip: text) or (-webkit-background-clip: text)) {
@@ -189,8 +189,7 @@ body {
         background-position: 140% 0;
         background-clip: text;
         -webkit-background-clip: text;
-        animation: word-sheen 850ms ease-out forwards;
-        animation-delay: calc(1500ms + (var(--sheen-index) * 250ms));
+        /*animation-delay: calc(1500ms + (var(--sheen-index) * 250ms));*/
     }
 }
 
@@ -227,7 +226,7 @@ body {
     transform: translateY(14px);
     animation:
         fade-in-logo 900ms ease-out 1200ms forwards,
-        logo-to-banner 900ms ease-in-out 3900ms forwards;
+        logo-to-banner 900ms ease-in-out 1600ms forwards;
 }
 
 .hero p {
