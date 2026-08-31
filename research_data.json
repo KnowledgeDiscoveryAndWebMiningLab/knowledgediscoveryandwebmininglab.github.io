@@ -1,65 +1,338 @@
 {
-  "recent_publications": [
-    {"link": "https://ieeexplore.ieee.org/abstract/document/11416053/", "citation": "Livers, J., Johnson, N., Spurlock, K., & Nasraoui, O. (2025, November). When Splits Matter: Interpreting Disaster Tweet Classification Models. In 2025 IEEE International Conference on Data Mining Workshops (ICDMW) (pp. 2844-2851). IEEE." },
-    {"link": "https://ieeexplore.ieee.org/abstract/document/11164103/", "citation": "Acun, C., Ashary, A., Popa, D. O., & Nasraoui, O. (2025, August). Task Allocation for Nursing Robots Using Explainable Machine Learning with Factorization Machines. In 2025 IEEE 21st International Conference on Automation Science and Engineering (CASE) (pp. 1044-1049). IEEE."},
-    {"link": "https://arxiv.org/abs/2507.05165", "citation": "Munia, N., Zhu, J., Nasraoui, O., & Imran, A. A. Z. (2025). Differential attention for multimodal crisis event analysis. arXiv preprint arXiv:2507.05165."},
-    {"link": "https://www.mdpi.com/2076-3417/15/13/7544", "citation":"Acun, C., & Nasraoui, O. (2025). Pre Hoc and Co Hoc Explainability: Frameworks for Integrating Interpretability into Machine Learning Training for Enhanced Transparency and Performance. Applied Sciences, 15(13), 7544."}
-  ],
   "grants": [
     {
-      "name": "Climate Resilience through Multidisciplinary Big Data Learning, Prediction & Building Response Systems",
-      "date": "7/1/24-6/30/29",
-      "role": "Olfa Nasraoui (Co-PI)",
-      "awardNo": "2344533",
-      "amount": "$20,000,000",
-      "provider": "National Science Foundation (NSF)",
-      "providerImage": "public/nsf.png",
-      "related_publications": [
-        "Citation coming soon.",
-        "Citation coming soon."
-      ]
+      "award_number": "2438935",
+      "title": "Planning: DCL EPSCOR: CISE Large: Investigations in Foundational Models for Recommendation with Applications to Complex Domains",
+      "principal_investigator": {
+        "name": "Olfa Nasraoui"
+      },
+      "co_principal_investigators": [
+        {
+          "name": "Chirag Shah",
+          "emails": [
+            "chirags@uw.edu"
+          ]
+        }
+      ],
+      "organization": "University of Louisville Research Foundation Inc",
+      "nsf_organization": "CNS",
+      "start_date": "2024-10-01",
+      "award_amount_usd": 100000,
+      "award_url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2438935&HistoricalAwards=false",
+      "abstract": "Recommender systems use machine learning to learn about people's preferences from their feedback. These systems then suggest a small, relevant subset of options from a large pool, tailored to each user's needs. Recommender systems help users find items they might not have discovered on their own.",
+      "abstract_status": "verified_partial_nsf_award_data",
+      "abstract_note": "The NSF-derived dataset available through the browsing interface truncates the remainder of this award abstract, so only complete, directly verified sentences are included here."
     },
     {
-      "name": "MRI: Acquisition of a High Performance Big Data Analysis Platform",
-      "date": "10/1/2018-9/30/2020",
-      "role": "Olfa Nasraoui (Co-PI)",
-      "awardNo": "1828521",
-      "amount": "$478,727",
-      "provider": "National Science Foundation (NSF)",
-      "providerImage": "public/nsf.png",
-      "description": "*In collaboration with PI Nihat Altiparmak and Co-PIs Ayman El-baz, Bert Little, Nejat Egilmez, and Senior Personnel Robert Keynton, Hichem Frigui, Richard Kerber, and Karunarathna Kulasekera at the University of Louisville.",
-      "related_publications": []
+      "award_number": "2026584",
+      "title": "FW-HTF-RM: Enhancing Future Work of Nursing Professionals through Collaborative Human-Robot Interfaces",
+      "principal_investigator": {
+        "name": "Dan O Popa"
+      },
+      "co_principal_investigators": [
+        {
+          "name": "Olfa Nasraoui",
+          "emails": [
+            "olfa.nasraoui@louisville.edu"
+          ]
+        },
+        {
+          "name": "Bryan D Edwards",
+          "emails": [
+            "bryan.edwards@okstate.edu"
+          ]
+        },
+        {
+          "name": "William D Paiva",
+          "emails": [
+            "wpaiva@okstate.edu"
+          ]
+        },
+        {
+          "name": "Mimia C Logdson",
+          "emails": [
+            "mclogs01@louisville.edu"
+          ]
+        }
+      ],
+      "organization": "University of Louisville Research Foundation Inc",
+      "nsf_organization": "DRL",
+      "start_date": "2020-10-01",
+      "award_amount_usd": 1515705,
+      "award_url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2026584&HistoricalAwards=false",
+      "abstract": "This Future of Work at the Human-Technology Frontier (FW-HTF) research project advances a vision for the profession of nursing where collaborative human-robot interfaces (CHRIs) can enhance nurse productivity and reduce on-the-job stress. Interfaces in this project are broadly defined as any link between humans and intelligent machines such as robots, using advanced sensors, mobile computing, and display devices. In this project, interfaces will intelligently “adapt” to provide both physical and cognitive assistance to nurses and patients in future healthcare environments. The project will pursue four objectives. The team will develop a taxonomy of nursing tasks to determine those that can be justifiably delegated to intelligent robots. The team will then compare the ability of two novel CHRIs to facilitate stable and effective shared human-robot control of a robot-assisted walking task (i.e., fall prevention). They will also investigate a CHRI recommender system that coordinates patient sitting tasks such as vital signs monitor and item fetching among several nurses and mobile manipulators. The goal here is to determine the optimal number of robotic assistants per group of patients and nurses. Finally, the team will evaluate the social and economic impact of the technology on nurses, patients, and healthcare facilities. The project will promote the progress of science and advance the national health by providing a blueprint for engineering future nursing assistant robots, for informing healthcare facility design to accommodate the robots, and for advancing instruction on the use of intelligent robotic assistants into formal nursing education, nurse training, and credentialing. Other potential benefits of the project include the development of instructional programs in robotics and machine learning at the University of Louisville, involvement of undergraduate nursing students in this research, and outreach to rural primary care clinics and hospital settings through the Center for Health Systems Innovation at the Oklahoma State University.\n\nThis project includes four objectives: Behavioral observation, documentation reviews, task inventories and critical incidents will be analyzed to develop a task, skill, and context taxonomy to identify nursing tasks that can be assigned to intelligent robotic nurse assistants; The team will develop two CHRIs and then compare their performance in an assisted walking task with the abilities of human nursing staff. These interfaces utilize neural networks and generic algorithms and adjust to psycho-physiological and tactile signals from users and are designed to allow novice nurses and patients to operate robots with wearable sensors for prevention of falls. The team will then enhance the informational capabilities of the physical CHRIs using collaborative filtering, hybrid recommendation and machine learning techniques. The goal here is to develop an intelligent recommender system that will promote efficiency in the deployment of robotic assistants capable of performing patient sitting tasks such as vital signs monitoring and item fetching. The interfaces in this project will be evaluated by approximately 150 expert and novice users, nursing students and simulated patients to advance understanding of which types of tasks are better assigned to people and which may be delegated to robots in nursing scenarios. Finally, the team will perform economic analyses of the impact of the technology on nursing costs and the skilling needs for future healthcare industry through O*NET databases.\n\nThis award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.",
+      "abstract_status": "verified_full_nsf_award_data"
     },
     {
-      "name": "RET Site: Research Experiences for Teachers in Big Data and Data Science",
-      "date": "2/15/2018-1/31/2021",
-      "role": "Olfa Nasraoui (PI)",
-      "awardNo": "1801513",
-      "amount": "$598,128",
-      "provider": "National Science Foundation (NSF)",
-      "providerImage": "public/nsf.png",
-      "description": "*In collaboration with Co-PI Stephanie Philipp, and Senior Personnel Nihat Altiparmak, Jason Immekus, Dan Popa, Aly Farag, Hichem Frigui, Huacheng Zeng, and Hui Zhang at the University of Louisville.",
-      "related_publications": []
+      "award_number": "1936125",
+      "title": "ADVANCE Adaptation: Advancement through Healthy Empowerment, Networking and Awareness (ATHENA) at University of Louisville",
+      "principal_investigator": {
+        "name": "Olfa Nasraoui"
+      },
+      "co_principal_investigators": [
+        {
+          "name": "Robert W Cohn",
+          "emails": [
+            "rwcohn@louisville.edu"
+          ]
+        },
+        {
+          "name": "Melanie J Gast",
+          "emails": [
+            "melanie.gast@louisville.edu"
+          ]
+        },
+        {
+          "name": "Tracy Eells",
+          "emails": [
+            "eells@louisville.edu"
+          ]
+        },
+        {
+          "name": "Veronnie F Jones",
+          "emails": [
+            "vfjone01@louisville.edu"
+          ]
+        },
+        {
+          "name": "William C Byrd",
+          "former": true,
+          "emails": [
+            "wcbyrd@umich.edu"
+          ]
+        }
+      ],
+      "organization": "University of Louisville Research Foundation Inc",
+      "nsf_organization": "EES",
+      "start_date": "2019-10-01",
+      "award_amount_usd": 1000000,
+      "award_url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1936125&HistoricalAwards=false",
+      "abstract": "The University of Louisville (UofL) ADVANCE Adaptation project called the Advancement through Healthy Empowerment, Networking, and Awareness (ATHENA) will improve equity for STEM faculty. UofL is a state-supported research university, with a mission to pursue excellence and inclusiveness in research, teaching, and service. The project will lead to the creation of an ATHENA Center for STEM Equity which will enhance UofL's institutional capacity in STEM equity research and will help to sustain the ADVANCE Adaptation project strategies shown to be effective.\n\nThe institution has done a self-study to identify equity issues for STEM faculty by gender and have identified promising practices from other ADVANCE grantees. Areas that will be addressed by the ATHENA project include: 1) implicit bias; 2) recruitment and retention; 3) differential time in rank for STEM faculty; and 4) professional isolation. Strategies that will be implemented include: changing the search, recruitment and hiring practices by adapting components from the University of Michigan's Strategies and Tactics for Recruiting to Increase Diversity and Excellence (STRIDE); creating a mentoring program with an emphasis on improving opportunities for mid-career promotion based on Florida International University's Faculty Mentoring Program (FMP); establishing a program to support the career progress of faculty going through major life events; implementing data collection to support evaluation and monitoring efforts; and educating faculty about gender-by-ethnicity biases that affect the advancement of women in STEM disciplines through theatre based workshops.\n\nThe NSF ADVANCE program is designed to foster gender equity through a focus on the identification and elimination of organizational barriers that impede the full participation and advancement of diverse faculty in academic institutions. Organizational barriers that inhibit equity may exist in policies, processes, practices, and the organizational culture and climate. ADVANCE “Adaptation” awards provide support for the adaptation and adoption of evidence-based strategies to academic, non-profit institution of higher education as well as non-academic, non-profit organizations.\n\nThis award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.",
+      "abstract_status": "verified_full_nsf_award_data"
     },
     {
-      "name": "Logistics Sourcing Model",
-      "date": "1/1/2017-9/30/2017",
-      "role": "Olfa Nasraoui (Co-PI)",
-      "amount": "$175,000",
-      "provider": "OMYA, Inc.",
-      "providerImage": "public/omya.png",
-      "description": "*In collaboration with PI Monica Gentili and Co-PIs Nihat Altiparmak and Kevin Gue at the University of Louisville.",
-      "related_publications": []
+      "award_number": "1828521",
+      "title": "MRI: Acquisition of a High Performance Big Data Analysis Platform",
+      "principal_investigator": {
+        "name": "Nihat Altiparmak"
+      },
+      "co_principal_investigators": [
+        {
+          "name": "Olfa Nasraoui",
+          "emails": [
+            "olfa.nasraoui@louisville.edu"
+          ]
+        },
+        {
+          "name": "Ayman El-Baz",
+          "emails": [
+            "aselba01@louisville.edu"
+          ]
+        },
+        {
+          "name": "Bert Little",
+          "emails": [
+            "bert.little@louisville.edu"
+          ]
+        },
+        {
+          "name": "Nejat Egilmez",
+          "emails": [
+            "nejat.egilmez@louisville.edu"
+          ]
+        }
+      ],
+      "organization": "University of Louisville Research Foundation Inc",
+      "nsf_organization": "CNS",
+      "start_date": "2018-10-01",
+      "award_amount_usd": 478727,
+      "award_url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1828521&HistoricalAwards=false",
+      "abstract": "This project from the University of Louisville Research Foundation will support acquisition of a Big Data Analysis Platform (BDAP) with high performance data storage, networking, and processing capabilities. The platform will support research in multimedia, biomedicine, metagenomics, and health data analysis. In addition, the platform will allow general research on efficient management and analysis of big data. Moreover, strengthening scientific research across the university, the researchers will engage with K-12 students and teachers.\n\nThe project will advance the state-of-the-art in big data management and analysis by enabling five research thrusts that will use the BDAP equipment purchased by this award. First, BDAP will provide improvement over existing big data management techniques by introducing self-optimizing and energy efficient big data platforms through dynamic data placement, retrieval, and reorganization algorithms, as well as enabling efficient big data analysis through novel heterogeneous and multi-source data clustering algorithms. Second, BDAP will allow experimentation with novel algorithms guided by deep neural networks to analyze big multimedia data. Third, BDAP will enable experimentation with new paradigms for integrating big biomedical data from multiple sources including image, genomic, quantitative, biological, and observational data. Fourth, BDAP will enable testing of techniques to generate, store, analyze and integrate large microbiome, health and socioeconomic data sets to determine the causal relationship between specific microbial profiles and human health via bioinformatics and data mining approaches. Finally, the project will contribute to the development of new statistical methods for analyzing high dimensional data for epigenetic, pharmacogenomics, and genome association studies. This in-house instrument enables energy consumption measurements and permanent storage for sensitive data sets of petabyte-range. While advancing engineering knowledge, the instrumentation supports computational, statistical, and bioengineering research, that applies engineering principles to several problems in biology and medicine.\n\nThis award reflects NSF's statutory mission and has been deemed worthy of support through evaluation using the Foundation's intellectual merit and broader impacts review criteria.",
+      "abstract_status": "verified_full_nsf_award_data"
     },
     {
-      "name": "Big Data Analysis in Medicine",
-      "date": "1/1/2017-12/31/2019",
-      "role": "Olfa Nasraoui (Co-PI)",
-      "amount": "$1,857,444",
-      "provider": "University of Louisville, 21st Century Initiative",
-      "providerImage": "public/UL-seal-red-RGB.webp",
-      "description": "*In collaboration with PIs Robert S. Keynton and Ayman El-Baz, and Co-PIs Nihat Altiparmak, Gregory N. Barnes, Roberto Bolli, Nigel Cooper, Hichem Frigui, Henry J. Kaplan, Eric Rouchka, and Mark Slaughter at University of Louisville.",
-      "related_publications": []
+      "award_number": "1801513",
+      "title": "RET Site: Research Experiences for Teachers in Big Data and Data Science",
+      "principal_investigator": {
+        "name": "Olfa Nasraoui"
+      },
+      "co_principal_investigators": [
+        {
+          "name": "Thomas R Tretter",
+          "emails": [
+            "trtret01@louisville.edu",
+            "tom.tretter@louisville.edu"
+          ]
+        },
+        {
+          "name": "Stephanie B Philipp",
+          "former": true,
+          "emails": [
+            "stephanie-philipp@utc.edu"
+          ]
+        }
+      ],
+      "organization": "University of Louisville Research Foundation Inc",
+      "nsf_organization": "CNS",
+      "start_date": "2018-02-15",
+      "award_amount_usd": 598128,
+      "award_url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1801513&HistoricalAwards=false",
+      "abstract": "This award creates a new Research Experiences for Teachers (RET) Site focused on Big Data and data science at the University of Louisville. Each summer, ten high school Science/Technology/Engineering/Mathematics (STEM) teachers will participate in research activities with faculty in labs at the University of Louisville. The teachers will be recruited from Jefferson County Public Schools and the Ohio Valley Education Consortium. Teachers in this site will apply fundamental data science techniques and learn Big Data principles while investigating real world problems with social relevance. The fast pace of low-cost technological innovation and data-centered operations have led to an explosion of data that can be used to solve problems and provide new insights for the future. This includes projects involving areas such as human welfare, healthcare, smart cities, and robotics. The participating teachers will translate their research experiences and knowledge into classroom practice by developing instructional modules and course materials that they will introduce in their classrooms and share with other teachers in their school districts. These activities all contribute to the formation of a community of practice in partnership with the University of Louisville faculty mentors that has the potential to significantly enhance STEM education in the participating school districts.\n\nRET Site participants will participate in cutting-edge research projects with state-of-the-art data science tools and techniques. The RET Site features a unique combination of faculty mentors from the Department of Computer Engineering and Computer Science who have experience in both hardware and software, which is a synergistic combination in the field of Big Data. The goals include: providing quality research experiences in Big Data and data science for the high school teachers; strengthening the connection between the computing faculty and the school districts; enhancing high school teachers' understanding of engineering research design and the principles of Big Data; enhancing high school teachers' abilities to teach engineering and computer science concepts in a compelling way; and preparing engineering graduate students and university faculty to assist and support the high school teachers and their students. As Big Data permeates all sectors of society, Big Data problems often arise in diverse disciplines, not just the computing field. The data-enabled approach is revolutionizing the way scientists and engineers in many fields practice, understand, and make discoveries. Thus, Big Data can impact all STEM subjects and may become fundamental to a quality high school STEM education. This project will help develop a core group of teachers who can bring Big Data principles and methods into their classrooms and excite high school students about the potential of Big Data and data science and its relevance to many possible career paths of the future.",
+      "abstract_status": "verified_full_nsf_award_data"
+    },
+    {
+      "award_number": "1549981",
+      "title": "INSPIRE: Not Unbiased: The Implications of Human-Algorithm Interaction on Training Data and Algorithm Performance",
+      "principal_investigator": {
+        "name": "Olfa Nasraoui"
+      },
+      "co_principal_investigators": [
+        {
+          "name": "Patrick Shafto",
+          "emails": [
+            "patrick.shafto@gmail.com"
+          ]
+        }
+      ],
+      "organization": "University of Louisville Research Foundation Inc",
+      "nsf_organization": "IIS",
+      "start_date": "2015-10-01",
+      "award_amount_usd": 829222,
+      "award_url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=1549981&HistoricalAwards=false",
+      "abstract": "This INSPIRE award is partially funded by the Information Integration and Informatics program in the Division of Information and Intelligent Systems in the Directorate for Computer & Information Science & Engineering, the Perception, Action & Cognition program in the Division of Behavioral and Cognitive Sciences in the Directorate for Social, Behavioral & Economic Sciences, and the Office of Integrative Activities in the Office of the Director.\n\nOne of the most common uses of machine learning is to learn to replicate human decisions, a common example is recommender systems. In these systems, computers are trained to replicate the recommendation a collaboration of hundreds or thousands of humans would give, if that were possible. Most of the data used to train these systems are not from a controlled random sample, but are obtained from users based on outputs of algorithms (e.g., which search engine results do users click on?), which introduces bias into the process and ultimately impacts the quality of the results. This project addresses this problem by examining how the human decision process that creates these data in the first place is affected by the data coming from machine algorithms, how this in turn impacts the algorithms themselves, and how to ultimately adjust for human bias in the machine learning process. Specific areas tackled are filtering (e.g., web search) and recommender systems. The deep research into how the human decision process affects machine learning, and how machine learning impacts the human decision process, can provide significant advances in the accuracy and utility of systems using machine learning.\n\nThe project builds on analysis of machine learning algorithms based on Hidden Markov Models (HMMs). The formal analysis initially looks at “blind spots” - the impact of bias from users not getting complete (or a random sample) of data. Further analysis will be based on the outcome of two human experiments: Two category recommendation (labeling items, with items to be labelled chosen by random, active learning, and filter-based algorithms), and movie recommendation. The results will be used to develop improved machine learning approaches based on antidotes (altering learned models to reduce bias) and reactive learning (active learning that takes into account the human and machine biases). The PIs also have plans to capitalize on the lessons learned by providing examples of the use of cognitive science in a Web Mining course, and of the impact of machine learning in Data Science for Psychologists courses.",
+      "abstract_status": "verified_full_nsf_award_data"
+    },
+    {
+      "award_number": "0916489",
+      "title": "DC: Small: Stream Clustering Algorithms in Mixed Domains with Soft Two-way Semi-Supervision",
+      "principal_investigator": {
+        "name": "Olfa Nasraoui"
+      },
+      "co_principal_investigators": [],
+      "organization": "University of Louisville Research Foundation Inc",
+      "nsf_organization": "IIS",
+      "start_date": "2009-09-01",
+      "award_amount_usd": 450000,
+      "award_url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0916489&HistoricalAwards=false",
+      "abstract": "One way to form a model of massive data sets is to use clustering techniques that summarize the data by several cluster representatives. However, clustering huge data sets is a very challenging problem whose difficulty increases further when the data is dynamic. We are developing scalable and robust stream summarization methods to provide a concise summary of huge multi-dimensional data streams that keep track of each discovered cluster or component of the summary through time, and that store only milestones corresponding to the occurrence of significant changes in these cluster representatives. Moreover to handle possibly diverse data formats and different sources of data, we are using a semi-supervised framework for (i) combining diverse representations of the data, in particular where data comes from different sources, some of which may be unreliable or uncertain; and (ii) exploiting optional external concept set labels to guide the clustering of the main data set in its original domain.\n\nOur methods have tremendous impact on applications that deal with streaming data in general, and more specifically on monitoring data streams in real-life dynamic settings. For example, as more and more everyday activities move online, network and Web data has been increasing at a rapid pace that precludes standard and classical data analysis methods, and call instead for real time analysis. The same can be said about the deluge of data that is being or about to be generated by new and future sensor networks, astronomical observatories, and missions in space. Thus, new research efforts and paradigms are needed and will have a strong impact on our ability to digest and make sense of this data.",
+      "abstract_status": "verified_full_nsf_award_data"
+    },
+    {
+      "award_number": "0532443",
+      "title": "SEI: Mining Solar Images to Support Astrophysics Research",
+      "principal_investigator": {
+        "name": "Olfa Nasraoui"
+      },
+      "co_principal_investigators": [],
+      "organization": "University of Louisville Research Foundation Inc",
+      "nsf_organization": "IIS",
+      "start_date": "2004-09-21",
+      "award_amount_usd": 209000,
+      "award_url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0532443&HistoricalAwards=false",
+      "abstract": null,
+      "abstract_status": "exact_nsf_abstract_not_retrieved",
+      "project_description": "The project develops a data-mining-based image retrieval system to sift large online NASA solar-image collections and automatically identify rare images containing coronal loops. These images are important for studying the coronal heating problem. The approach combines image processing, feature extraction, and machine-learning classification to detect images with loop structures and locate the loops, reducing the need for astrophysicists to manually screen very large image collections.",
+      "project_description_note": "Included as a researched project description, not represented as the verbatim NSF award abstract."
+    },
+    {
+      "award_number": "0431128",
+      "title": "SEI: Mining Solar Images to Support Astrophysics Research",
+      "principal_investigator": {
+        "name": "Olfa Nasraoui"
+      },
+      "co_principal_investigators": [
+        {
+          "name": "Joan T Schmelz",
+          "emails": [
+            "jschmelz@usra.edu"
+          ]
+        }
+      ],
+      "organization": "University of Memphis",
+      "nsf_organization": "IIS",
+      "start_date": "2004-09-15",
+      "award_amount_usd": 200000,
+      "award_url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0431128&HistoricalAwards=false",
+      "abstract": null,
+      "abstract_status": "exact_nsf_abstract_not_retrieved",
+      "project_description": "The project develops a data-mining-based image retrieval system to sift large online NASA solar-image collections and automatically identify rare images containing coronal loops. These images are important for studying the coronal heating problem. The approach combines image processing, feature extraction, and machine-learning classification to detect images with loop structures and locate the loops, reducing the need for astrophysicists to manually screen very large image collections.",
+      "project_description_note": "Included as a researched project description, not represented as the verbatim NSF award abstract."
+    },
+    {
+      "award_number": "0533317",
+      "title": "CAREER: New Clustering Algorithms Based on Robust Estimation and Genetic Niches with Applications to Web Usage Mining",
+      "principal_investigator": {
+        "name": "Olfa Nasraoui"
+      },
+      "co_principal_investigators": [],
+      "organization": "University of Louisville Research Foundation Inc",
+      "nsf_organization": "IIS",
+      "start_date": "2004-08-15",
+      "award_amount_usd": 198114,
+      "award_url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0533317&HistoricalAwards=false",
+      "abstract": null,
+      "abstract_status": "exact_nsf_abstract_not_retrieved",
+      "project_description": "This CAREER project develops robust and scalable clustering techniques for noisy, evolving data, with a particular emphasis on Web usage mining and personalization. Its goals include discovering an unknown number of clusters in the presence of significant noise, mining evolving user profiles from website browsing activity, maintaining the currency and accuracy of those profiles over time, scaling Web usage mining to very large Web-log data sets, and handling evolution in the underlying usage data. The work employs evolutionary and genetic-niching approaches to clustering.",
+      "project_description_note": "Included as a researched project description, not represented as the verbatim NSF award abstract."
+    },
+    {
+      "award_number": "0122950",
+      "title": "Department of A Scholarship Program for Computer Science, Engineering, and Mathematics Students: An Industry-Academia Partnership Approach",
+      "principal_investigator": {
+        "name": "David J Russomanno"
+      },
+      "co_principal_investigators": [
+        {
+          "name": "Hank Javan",
+          "emails": [
+            "hjavan@memphis.edu"
+          ]
+        },
+        {
+          "name": "Paul Palazolo",
+          "emails": [
+            "ppalozol@memphis.edu"
+          ]
+        },
+        {
+          "name": "Regina Hairston",
+          "emails": [
+            "rhairstn@memphis.edu"
+          ]
+        },
+        {
+          "name": "Olfa Nasraoui",
+          "emails": [
+            "olfa.nasraoui@louisville.edu"
+          ]
+        }
+      ],
+      "organization": "University of Memphis",
+      "nsf_organization": "DUE",
+      "start_date": "2002-09-01",
+      "award_amount_usd": 171869,
+      "award_url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0122950&HistoricalAwards=false",
+      "abstract": null,
+      "abstract_status": "exact_nsf_abstract_not_retrieved",
+      "project_description": "This NSF project established a scholarship program for students enrolled in computer science, engineering, and mathematics at the University of Memphis, using an industry-academia partnership approach. Contemporary project documentation describes support for approximately 25 students.",
+      "project_description_note": "Included as a researched project description, not represented as the verbatim NSF award abstract."
+    },
+    {
+      "award_number": "0133948",
+      "title": "CAREER: New Clustering Algorithms Based on Robust Estimation and Genetic Niches with Applications to Web Usage Mining",
+      "principal_investigator": {
+        "name": "Olfa Nasraoui"
+      },
+      "co_principal_investigators": [],
+      "organization": "University of Memphis",
+      "nsf_organization": "IIS",
+      "start_date": "2002-03-15",
+      "award_amount_usd": 216000,
+      "award_url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=0133948&HistoricalAwards=false",
+      "abstract": null,
+      "abstract_status": "exact_nsf_abstract_not_retrieved",
+      "project_description": "This CAREER project develops robust and scalable clustering techniques for noisy, evolving data, with a particular emphasis on Web usage mining and personalization. Its goals include discovering an unknown number of clusters in the presence of significant noise, mining evolving user profiles from website browsing activity, maintaining the currency and accuracy of those profiles over time, scaling Web usage mining to very large Web-log data sets, and handling evolution in the underlying usage data. The work employs evolutionary and genetic-niching approaches to clustering.",
+      "project_description_note": "Included as a researched project description, not represented as the verbatim NSF award abstract."
     }
   ]
 }

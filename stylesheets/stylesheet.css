@@ -293,6 +293,22 @@ nav a:focus-visible {
   font-weight: bold;
 }
 
+.grant-abstract {
+  margin-top: 18px;
+}
+
+.grant-abstract summary {
+  color: #AD0000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.grant-abstract p {
+  margin-top: 12px;
+  color: #222;
+  line-height: 1.55;
+}
+
 .related-publications {
   margin-top: 18px;
 }
@@ -305,6 +321,50 @@ nav a:focus-visible {
 
 .related-publications .publication-list {
   margin-top: 12px;
+}
+
+.publications-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.publication-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #AD0000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 200ms ease;
+  border: 2px solid transparent;
+}
+
+.publication-link:hover,
+.publication-link:focus-visible {
+  border-color: #AD0000;
+  background-color: rgba(173, 0, 0, 0.08);
+  transform: translateY(-4px);
+  outline: none;
+}
+
+.publication-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 200ms ease;
+}
+
+.publication-link:hover .publication-logo,
+.publication-link:focus-visible .publication-logo {
+  transform: scale(1.1);
 }
 
 .site-footer {

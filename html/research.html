@@ -44,7 +44,22 @@
         <a href="research.html">Research</a>
     </nav>
 
-    <main id="research" class="research-list" aria-label="Research"></main>
+    <main id="research" class="research-list" aria-label="Research">
+        <section class="research-section">
+            <h2 class="people-divider">Publications</h2>
+            <div class="publications-links">
+                <a href="https://www.researchgate.net/profile/Olfa-Nasraoui" class="publication-link" target="_blank" rel="noopener noreferrer">
+                    <img src="../public/ResearchGate_icon_SVG.svg.webp" alt="ResearchGate Logo" class="publication-logo">
+                    <span>Research Gate</span>
+                </a>
+                <a href="https://scholar.google.com/citations?user=SGscZDgAAAAJ&hl=en" class="publication-link" target="_blank" rel="noopener noreferrer">
+                    <img src="../public/Google_Scholar_logo.svg.webp" alt="Google Scholar Logo" class="publication-logo">
+                    <span>Google Scholar</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
 
     <footer class="site-footer">
         <div class="quote-scroll">
@@ -66,14 +81,6 @@
             return element;
         }
 
-        function resolveAssetPath(path) {
-            if (!path || /^(https?:)?\/\//.test(path) || path.startsWith('data:')) {
-                return path;
-            }
-
-            return new URL(`../${path.replace(/^\.?\//, '')}`, window.location.href).href;
-        }
-
         function createSection(title) {
             const section = document.createElement('section');
             section.className = 'research-section';
@@ -81,29 +88,38 @@
             return section;
         }
 
-        function createPublicationList(publications) {
-            const list = document.createElement('ol');
-            list.className = 'publication-list';
+        function formatDate(dateString) {
+            if (!dateString) return '';
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        }
 
-            if (publications.length === 0) {
-                addText(list, 'li', 'research-empty', 'No publications listed yet.');
-            } else {
-                publications.forEach((publication) => {
-                    const item = document.createElement('li');
-                    item.className = 'publication-item';
+        function formatCurrency(amount) {
+            if (!amount) return '';
+            return new Intl.NumberFormat('en-US', { 
+                style: 'currency', 
+                currency: 'USD',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(amount);
+        }
 
-                    const anchor = document.createElement('a');
-                    anchor.href = publication.link;
-                    anchor.textContent = publication.citation;
-                    anchor.target = '_blank';
-                    anchor.rel = 'noopener noreferrer';
-
-                    item.appendChild(anchor);
-                    list.appendChild(item);
+        function formatInvestigators(grant) {
+            const investigators = [];
+            
+            if (grant.principal_investigator && grant.principal_investigator.name) {
+                investigators.push(grant.principal_investigator.name + ' (PI)');
+            }
+            
+            if (grant.co_principal_investigators && Array.isArray(grant.co_principal_investigators)) {
+                grant.co_principal_investigators.forEach((cpi) => {
+                    if (cpi.name) {
+                        investigators.push(cpi.name + (cpi.former ? ' (former)' : ''));
+                    }
                 });
             }
-
-            return list;
+            
+            return investigators.join('; ');
         }
 
         function createGrantBlock(grant) {
@@ -113,47 +129,68 @@
             const provider = document.createElement('div');
             provider.className = 'grant-provider';
 
-            if (grant.providerImage) {
-                const image = document.createElement('img');
-                image.src = resolveAssetPath(grant.providerImage);
-                image.alt = grant.provider || 'Grant provider';
-                image.loading = 'lazy';
-                provider.appendChild(image);
-            }
+            // Add NSF logo or placeholder
+            const image = document.createElement('img');
+            image.src = '../public/nsf.png';
+            image.alt = 'NSF Award';
+            image.loading = 'lazy';
+            image.style.maxWidth = '120px';
+            provider.appendChild(image);
 
             const details = document.createElement('div');
             details.className = 'grant-details';
 
-            addText(details, 'h3', 'grant-name', grant.name);
-            addText(details, 'p', 'grant-provider-name', grant.provider);
+            // Create title as a link
+            const titleHeading = document.createElement('h3');
+            titleHeading.className = 'grant-name';
+            if (grant.award_url) {
+                const titleLink = document.createElement('a');
+                titleLink.href = grant.award_url;
+                titleLink.textContent = grant.title;
+                titleLink.target = '_blank';
+                titleLink.rel = 'noopener noreferrer';
+                titleHeading.appendChild(titleLink);
+            } else {
+                titleHeading.textContent = grant.title;
+            }
+            details.appendChild(titleHeading);
+
+            addText(details, 'p', 'grant-provider-name', grant.organization);
 
             const meta = document.createElement('dl');
             meta.className = 'grant-meta';
 
-            addText(meta, 'dt', '', 'Date');
-            addText(meta, 'dd', '', grant.date);
-            addText(meta, 'dt', '', 'Role');
-            addText(meta, 'dd', '', grant.role);
+            addText(meta, 'dt', '', 'Start Date');
+            addText(meta, 'dd', '', formatDate(grant.start_date));
             addText(meta, 'dt', '', 'Award No.');
-            addText(meta, 'dd', '', grant.awardNo);
+            addText(meta, 'dd', '', grant.award_number);
             addText(meta, 'dt', '', 'Amount');
-            addText(meta, 'dd', '', grant.amount);
+            addText(meta, 'dd', '', formatCurrency(grant.award_amount_usd));
+            addText(meta, 'dt', '', 'NSF Organization');
+            addText(meta, 'dd', '', grant.nsf_organization || 'N/A');
             details.appendChild(meta);
 
-            if (grant.investigators) {
-                addText(details, 'p', 'grant-investigators', grant.investigators);
+            const investigators = formatInvestigators(grant);
+            if (investigators) {
+                addText(details, 'p', 'grant-investigators', investigators);
             }
 
-            if (grant.description) {
-                addText(details, 'p', 'grant-description', grant.description);
+            // Add abstract/description as a dropdown
+            const description = grant.abstract || grant.project_description;
+            if (description) {
+                const abstractDetails = document.createElement('details');
+                abstractDetails.className = 'grant-abstract';
+                
+                const summary = document.createElement('summary');
+                summary.textContent = 'Abstract';
+                abstractDetails.appendChild(summary);
+                
+                const abstractPara = document.createElement('p');
+                abstractPara.textContent = description;
+                abstractDetails.appendChild(abstractPara);
+                
+                details.appendChild(abstractDetails);
             }
-
-            const related = document.createElement('details');
-            related.className = 'related-publications';
-
-            addText(related, 'summary', '', 'Related Publications');
-            related.appendChild(createPublicationList(grant.related_publications || []));
-            details.appendChild(related);
 
             block.appendChild(provider);
             block.appendChild(details);
@@ -170,10 +207,6 @@
                 return response.json();
             })
             .then((data) => {
-                const publicationsSection = createSection('Recent Publications');
-                publicationsSection.appendChild(createPublicationList(data.recent_publications || []));
-                researchList.appendChild(publicationsSection);
-
                 const grantsSection = createSection('Grants');
                 const grants = data.grants || [];
 
