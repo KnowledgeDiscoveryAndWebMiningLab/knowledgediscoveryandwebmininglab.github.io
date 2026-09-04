@@ -386,44 +386,14 @@ nav a:focus-visible {
   padding: 18px 0;
 }
 
-.quote-scroll {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.quote-scroll p {
-  display: inline-block;
+.site-footer p {
+  text-align: center;
   min-width: 100%;
   margin: 0;
-  padding-left: 100%;
   font-family: Georgia, serif;
   font-size: clamp(1rem, 2vw, 1.25rem);
   line-height: 1.4;
-  animation: quote-scroll-left 24s linear infinite;
-}
-
-@keyframes quote-scroll-left {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .quote-scroll {
-    white-space: normal;
-  }
-
-  .quote-scroll p {
-    display: block;
-    padding: 0 20px;
-    text-align: center;
-    animation: none;
-  }
+  /*animation: quote-scroll-left 24s linear infinite;*/
 }
 
 @media (max-width: 640px) {
