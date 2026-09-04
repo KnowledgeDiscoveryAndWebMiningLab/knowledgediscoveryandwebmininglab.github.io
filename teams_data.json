@@ -5,49 +5,326 @@
       "role": "Founder and PI",
       "date": "1999-present",
       "bio": "Professor of Computer Science and Engineering, Endowed Chair of E-commerce and the founding director of the Knowledge Discovery & Web Mining Lab at University of Louisville. She received her Ph.D in Computer Engineering and Computer Science from the University of Missouri-Columbia.",
-      "image": "public/team_images/olfa.jpeg"
+      "image": "public/team_images/nasraoui_olfa.jpeg"
     },
     {
       "name": "Kyle Spurlock",
       "role": "PhD Student",
       "date": "2021-present",
-      "bio": "Bio coming soon.",
-      "image": "public/team_images/kyle.jpg"
+      "image": "public/team_images/spurlock_kyle.png"
     },
     {
       "name": "Sami Alsheri",
       "role": "PhD Student",
       "date": "2022-present",
-      "bio": "Bio coming soon.",
-      "image": "public/team_images/sami.jpg"
+      "image": "public/team_images/alsheri_sami.png"
     },
     {
       "name": "Nicholas Johnson",
       "role": "PhD Student",
       "date": "2023-present",
-      "bio": "Bio coming soon.",
-      "image": ""
+      "image": "public/team_images/johnson_nicholas.png"
     },
     {
       "name": "Richard Douglas",
       "role": "PhD Student",
       "date": "2025-present",
-      "bio": "Bio coming soon.",
-      "image": "public/team_images/richard.jpg"
+      "image": ""
     },
     {
       "name": "Rupa Ghosh",
       "role": "PhD Student",
       "date": "2025-present",
-      "bio": "Bio coming soon.",
       "image": ""
     },
     {
       "name": "Rafia Fayyaz",
       "role": "Masters Student",
       "date": "2025-present",
-      "bio": "Bio coming soon."
+      "image": "public/team_images/fayyaz_rafia.jfif"
     }
   ],
-  "alumni": []
+
+  "alumni": [
+    {
+      "name": "Khalil Damak",
+      "role": "PhD Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/damak_khalil.png"
+    },
+    {
+      "name": "Olurotimi Seton",
+      "role": "PhD Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/seton_olurotimi.png"
+    },
+    {
+      "name": "Sami Khenissi",
+      "role": "PhD Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/khenissi_sami.png"
+    },
+    {
+      "name": "A. Çağla Acun",
+      "role": "PhD Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/acun_cagla.png"
+    },
+    {
+      "name": "Mohammed Alshammari",
+      "role": "PhD Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/alshammari_mohammed.png"
+    },
+    {
+      "name": "Wenlong Sun",
+      "role": "PhD Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/sun_wenlong.png"
+    },
+    {
+      "name": "Behnoush Abdollahi",
+      "role": "PhD Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/abdollahi_behnoush.png"
+    },
+    {
+      "name": "Mahsa Badami",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/badami_mahsa.png"
+    },
+    {
+      "name": "Gopi Nutakki",
+      "role": "PhD Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/nutakki_gopi.png"
+    },
+    {
+      "name": "Jaylen Jones",
+      "role": "REU Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/jones_jaylen.png"
+    },
+    {
+      "name": "Mariem Boujelbene",
+      "role": "PhD Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/boujelbene_mariem.png"
+    },
+    {
+      "name": "Grace McClurg",
+      "role": "Undergraduate",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/mcclurg_grace.png"
+    },
+    {
+      "name": "Basheer Hawwash",
+      "role": "PhD Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/hawwash_basheer.png"
+    },
+    {
+      "name": "Artur Abdullin",
+      "role": "PhD Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/abdullin_artur.png"
+    },
+    {
+      "name": "Esin Saka",
+      "role": "PhD Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/saka_esin.png"
+    },
+    {
+      "name": "Nurcan Durak",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/durak_nurcan.png"
+    },
+    {
+      "name": "Elizabeth Leon",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/leon_elizabeth.png"
+    },
+    {
+      "name": "Zhiyong Zhang",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/zhang_zhiyong.png"
+    },
+    {
+      "name": "Leyla Zhuhadar",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/zhuhadar_leyla.png"
+    },
+    {
+      "name": "Aneseh Alvanpour",
+      "role": "PhD Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/alvanpour_aneseh.png"
+    },
+    {
+      "name": "Garett Ridge",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/ridge_garett.png"
+    },
+    {
+      "name": "Carlos Rojas",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/rojas_carlos.png"
+    },
+    {
+      "name": "Kiana Cramer",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/cramer_kiana.png"
+    },
+    {
+      "name": "Gurmit Kaur",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/kaur_gurmit.png"
+    },
+    {
+      "name": "Heba Elgazzar",
+      "role": "Masters Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/elgazzar_heba.png"
+    },
+    {
+      "name": "Jaafar Ben-Abdallah",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/ben-abdallah_jaafar.png"
+    },
+    {
+      "name": "Sofiane Sellah",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/sellah_sofiane.png"
+    },
+    {
+      "name": "Jared Jones",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/jones_jared.png"
+    },
+    {
+      "name": "Samuel Naser",
+      "role": "Undergraduate",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/naser_samuel.png"
+    },
+    {
+      "name": "Jeff Cerwinske",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/cerwinske_jeff.png"
+    },
+    {
+      "name": "Roger Mendes",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/mendes_roger.png"
+    },
+    {
+      "name": "David Chase Childers",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/childers_david-chase.png"
+    },
+    {
+      "name": "Mihir Kotwal",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/kotwal_mihir.png"
+    },
+    {
+      "name": "Nicholas Miles",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/miles_nicholas.png"
+    },
+    {
+      "name": "Derek Reese",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/reese_derek.png"
+    },
+    {
+      "name": "Pegah Sagheb",
+      "role": "PhD Student",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/sagheb_pegah.png"
+    },
+    {
+      "name": "Maha Soliman",
+      "role": "",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/soliman_maha.png"
+    },
+    {
+      "name": "Koutheair Khribi",
+      "role": "Fullbright Scholar",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/khribi_koutheair.png"
+    },
+    {
+      "name": "Fabio Gonzalez",
+      "role": "Fullbright Scholar",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/gonzalez_fabio.png"
+    },
+    {
+      "name": "Jonathan Gomez",
+      "role": "Fullbright Scholar",
+      "date": "",
+      "bio": "",
+      "image": "public/team_images/gomez_jonathan.png"
+    }
+  ]
 }

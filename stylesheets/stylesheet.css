@@ -152,11 +152,14 @@ nav a:focus-visible {
   display: grid;
   place-items: center;
   overflow: hidden;
-  background: #AD0000;
-  color: white;
   font-size: 2.4rem;
   font-weight: bold;
   border-radius: 8px;
+}
+
+.person-image-initials {
+  background: #AD0000;
+  color: white;
 }
 
 .person-image img {

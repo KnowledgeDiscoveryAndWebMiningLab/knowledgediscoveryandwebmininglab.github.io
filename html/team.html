@@ -98,10 +98,12 @@
         image.addEventListener('error', () => {
           image.remove();
           imageWrap.textContent = getInitials(person.name);
+          imageWrap.className += ' person-image-initials' // Add class for initials
         });
         imageWrap.appendChild(image);
       } else {
         imageWrap.textContent = getInitials(person.name);
+        imageWrap.className += ' person-image-initials' // Add class for initials
       }
 
       const details = document.createElement('div');
@@ -148,7 +150,7 @@
       })
       .then((data) => {
         peopleList.appendChild(createPeopleSection('Current Members', data.current || []));
-        peopleList.appendChild(createPeopleSection('Past Members', data.alumni || []));
+        peopleList.appendChild(createPeopleSection('Alumni', data.alumni || []));
       })
       .catch(() => {
         addText(peopleList, 'p', 'people-error', 'Team information is unavailable right now.');
