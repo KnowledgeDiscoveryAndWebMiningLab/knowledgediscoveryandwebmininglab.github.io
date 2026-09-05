@@ -3,7 +3,6 @@
     {
       "name": "Olfa Nasraoui, PhD",
       "role": "Founder and PI",
-      "date": "1999-present",
       "bio": "Professor of Computer Science and Engineering, Endowed Chair of E-commerce and the founding director of the Knowledge Discovery & Web Mining Lab at University of Louisville. She received her Ph.D in Computer Engineering and Computer Science from the University of Missouri-Columbia.",
       "image": "public/team_images/nasraoui_olfa.jpeg"
     },
@@ -111,7 +110,7 @@
     },
     {
       "name": "Jaylen Jones",
-      "role": "REU Student",
+      "role": "Undergraduate (REU)",
       "date": "",
       "bio": "",
       "image": "public/team_images/jones_jaylen.png"
@@ -188,7 +187,7 @@
     },
     {
       "name": "Garett Ridge",
-      "role": "",
+      "role": "Undergraduate (REU)",
       "date": "",
       "bio": "",
       "image": "public/team_images/ridge_garett.png"
@@ -202,14 +201,14 @@
     },
     {
       "name": "Kiana Cramer",
-      "role": "",
+      "role": "Undergraduate (REU)",
       "date": "",
       "bio": "",
       "image": "public/team_images/cramer_kiana.png"
     },
     {
       "name": "Gurmit Kaur",
-      "role": "",
+      "role": "Undergraduate (REU)",
       "date": "",
       "bio": "",
       "image": "public/team_images/kaur_gurmit.png"
@@ -237,56 +236,56 @@
     },
     {
       "name": "Jared Jones",
-      "role": "",
+      "role": "Undergraduate (REU)",
       "date": "",
       "bio": "",
       "image": "public/team_images/jones_jared.png"
     },
     {
       "name": "Samuel Naser",
-      "role": "Undergraduate",
+      "role": "Undergraduate (REU)",
       "date": "",
       "bio": "",
       "image": "public/team_images/naser_samuel.png"
     },
     {
       "name": "Jeff Cerwinske",
-      "role": "",
+      "role": "Masters Student",
       "date": "",
       "bio": "",
       "image": "public/team_images/cerwinske_jeff.png"
     },
     {
       "name": "Roger Mendes",
-      "role": "",
+      "role": "Undergraduate (REU)",
       "date": "",
       "bio": "",
       "image": "public/team_images/mendes_roger.png"
     },
     {
       "name": "David Chase Childers",
-      "role": "",
+      "role": "Undergraduate (REU)",
       "date": "",
       "bio": "",
       "image": "public/team_images/childers_david-chase.png"
     },
     {
       "name": "Mihir Kotwal",
-      "role": "",
+      "role": "Masters Student",
       "date": "",
       "bio": "",
       "image": "public/team_images/kotwal_mihir.png"
     },
     {
       "name": "Nicholas Miles",
-      "role": "",
+      "role": "Masters Student",
       "date": "",
       "bio": "",
       "image": "public/team_images/miles_nicholas.png"
     },
     {
       "name": "Derek Reese",
-      "role": "",
+      "role": "Masters Student",
       "date": "",
       "bio": "",
       "image": "public/team_images/reese_derek.png"
@@ -300,28 +299,28 @@
     },
     {
       "name": "Maha Soliman",
-      "role": "",
+      "role": "Postdoc",
       "date": "",
       "bio": "",
       "image": "public/team_images/soliman_maha.png"
     },
     {
       "name": "Koutheair Khribi",
-      "role": "Fullbright Scholar",
+      "role": "Fullbright Postdoc Scholar",
       "date": "",
       "bio": "",
       "image": "public/team_images/khribi_koutheair.png"
     },
     {
       "name": "Fabio Gonzalez",
-      "role": "Fullbright Scholar",
+      "role": "Fullbright Postdoc Scholar",
       "date": "",
       "bio": "",
       "image": "public/team_images/gonzalez_fabio.png"
     },
     {
       "name": "Jonathan Gomez",
-      "role": "Fullbright Scholar",
+      "role": "Fullbright Postdoc Scholar",
       "date": "",
       "bio": "",
       "image": "public/team_images/gomez_jonathan.png"
