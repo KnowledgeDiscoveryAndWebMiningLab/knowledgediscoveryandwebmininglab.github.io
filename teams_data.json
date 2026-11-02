@@ -32,7 +32,7 @@
     },
     {
       "name": "Rupa Ghosh",
-      "role": "PhD Student",
+      "role": "Masters Student",
       "date": "2025-present",
       "image": ""
     },
@@ -96,7 +96,7 @@
     },
     {
       "name": "Mahsa Badami",
-      "role": "",
+      "role": "PhD Student",
       "date": "",
       "bio": "",
       "image": "public/team_images/badami_mahsa.png"
@@ -111,7 +111,7 @@
     {
       "name": "Jaylen Jones",
       "role": "Undergraduate (REU)",
-      "date": "",
+      "date": "Summer 2021",
       "bio": "",
       "image": "public/team_images/jones_jaylen.png"
     },
@@ -152,28 +152,28 @@
     },
     {
       "name": "Nurcan Durak",
-      "role": "",
+      "role": "PhD Student",
       "date": "",
       "bio": "",
       "image": "public/team_images/durak_nurcan.png"
     },
     {
       "name": "Elizabeth Leon",
-      "role": "",
+      "role": "PhD Student",
       "date": "",
       "bio": "",
       "image": "public/team_images/leon_elizabeth.png"
     },
     {
       "name": "Zhiyong Zhang",
-      "role": "",
+      "role": "PhD Student",
       "date": "",
       "bio": "",
       "image": "public/team_images/zhang_zhiyong.png"
     },
     {
       "name": "Leyla Zhuhadar",
-      "role": "",
+      "role": "PhD Student",
       "date": "",
       "bio": "",
       "image": "public/team_images/zhuhadar_leyla.png"
@@ -194,7 +194,7 @@
     },
     {
       "name": "Carlos Rojas",
-      "role": "",
+      "role": "PhD Student",
       "date": "",
       "bio": "",
       "image": "public/team_images/rojas_carlos.png"
@@ -222,14 +222,14 @@
     },
     {
       "name": "Jaafar Ben-Abdallah",
-      "role": "",
+      "role": "PhD Student",
       "date": "",
       "bio": "",
       "image": "public/team_images/ben-abdallah_jaafar.png"
     },
     {
       "name": "Sofiane Sellah",
-      "role": "",
+      "role": "PhD Student",
       "date": "",
       "bio": "",
       "image": "public/team_images/sellah_sofiane.png"
@@ -324,6 +324,48 @@
       "date": "",
       "bio": "",
       "image": "public/team_images/gomez_jonathan.png"
+    },
+    {
+      "name": "Quyen Do",
+      "role": "Undergraduate (REU)",
+      "date": "Summer 2024",
+      "bio": "",
+      "image": ""
+    },
+    {
+      "name": "Anitej Themma",
+      "role": "Undergraduate (REU)",
+      "date": "Summer 2023",
+      "bio": "",
+      "image": ""
+    },
+    {
+      "name": "Keenrruy Murillo",
+      "role": "Undergraduate (REU)",
+      "date": "Summer 2023",
+      "bio": "",
+      "image": "public/team_images/murillo_keenrruy.jpg"
+    },
+    {
+      "name": "Jamie Livers",
+      "role": "Undergraduate (REU)",
+      "date": "Summer 2025",
+      "bio": "",
+      "image": ""
+    },
+    {
+      "name": "Nathan Perez",
+      "role": "Undergraduate (REU)",
+      "date": "Summer 2025",
+      "bio": "",
+      "image": ""
+    },
+    {
+      "name": "Garrett McNeil",
+      "role": "Undergraduate (REU)",
+      "date": "Summer 2026",
+      "bio": "",
+      "image": ""
     }
   ]
 }
