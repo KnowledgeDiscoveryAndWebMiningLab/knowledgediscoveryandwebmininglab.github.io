@@ -133,28 +133,60 @@ nav a:focus-visible {
   background: #AD0000;
 }
 
-.person-block {
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 24px;
-  align-items: start;
-  padding: 24px 0;
-  border-bottom: 1px solid #d7d7d7;
+.people-section > .people-subsection {
+  margin-top: 32px;
 }
 
-.person-block:last-child {
-  border-bottom: 0;
+.people-subsection > .people-divider {
+  font-size: 1.15rem;
+}
+
+.people-subsection > .people-divider::after {
+  height: 1px;
+  background: #d7d7d7;
+}
+
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+  gap: 40px 32px;
+  padding-top: 24px;
+}
+
+.person-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  min-width: 0;
+  text-align: center;
+}
+
+.person-block-featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 24px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #d7d7d7;
+  text-align: left;
+}
+
+.person-details {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .person-image {
-  width: 140px;
+  width: 180px;
+  max-width: 100%;
   aspect-ratio: 1;
   display: grid;
   place-items: center;
   overflow: hidden;
   font-size: 2.4rem;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 50%;
 }
 
 .person-image-initials {
@@ -171,7 +203,7 @@ nav a:focus-visible {
 .person-name {
   margin: 0;
   color: #111;
-  font-size: 1.75rem;
+  font-size: 1.4rem;
 }
 
 .person-role,
@@ -397,12 +429,16 @@ nav a:focus-visible {
 }
 
 @media (max-width: 640px) {
-  .person-block,
+  .person-block-featured,
   .grant-block {
     grid-template-columns: 1fr;
   }
 
-  .person-image,
+  .person-block-featured {
+    justify-items: center;
+    text-align: center;
+  }
+
   .grant-provider {
     width: 112px;
   }

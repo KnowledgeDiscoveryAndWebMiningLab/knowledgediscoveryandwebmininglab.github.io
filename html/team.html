@@ -68,6 +68,8 @@
     }
 
     function addText(parent, tagName, className, text) {
+      if (!text) return;
+
       const element = document.createElement(tagName);
       element.className = className;
       element.textContent = text;
@@ -82,9 +84,12 @@
       return new URL(`../${path.replace(/^\.?\//, '')}`, window.location.href).href;
     }
 
-    function createPersonBlock(person) {
+    function createPersonBlock(person, headingLevel = 3) {
       const block = document.createElement('article');
       block.className = 'person-block';
+      if (person.role === 'Founder and PI') {
+        block.classList.add('person-block-featured');
+      }
 
       const imageWrap = document.createElement('div');
       imageWrap.className = 'person-image';
@@ -108,7 +113,7 @@
       const details = document.createElement('div');
       details.className = 'person-details';
 
-      addText(details, 'h2', 'person-name', person.name);
+      addText(details, `h${headingLevel}`, 'person-name', person.name);
       addText(details, 'p', 'person-role', person.role);
       addText(details, 'p', 'person-date', person.date);
       addText(details, 'p', 'person-bio', person.bio);
@@ -119,11 +124,14 @@
       return block;
     }
 
-    function createPeopleSection(title, people) {
+    function createPeopleSection(title, people, headingLevel = 2) {
       const section = document.createElement('section');
       section.className = 'people-section';
+      if (headingLevel > 2) {
+        section.classList.add('people-subsection');
+      }
 
-      const heading = document.createElement('h2');
+      const heading = document.createElement(`h${headingLevel}`);
       heading.className = 'people-divider';
       heading.textContent = title;
       section.appendChild(heading);
@@ -131,10 +139,53 @@
       if (people.length === 0) {
         addText(section, 'p', 'people-empty', 'No members listed yet.');
       } else {
+        const grid = document.createElement('div');
+        grid.className = 'people-grid';
         people.forEach((person) => {
-          section.appendChild(createPersonBlock(person));
+          grid.appendChild(createPersonBlock(person, headingLevel + 1));
         });
+        section.appendChild(grid);
       }
+
+      return section;
+    }
+
+    function createAlumniSection(people) {
+      if (people.length === 0) {
+        return createPeopleSection('Alumni', people);
+      }
+
+      const section = document.createElement('section');
+      section.className = 'people-section';
+      addText(section, 'h2', 'people-divider', 'Alumni');
+
+      const roleTitles = new Map([
+        ['phd student', 'PhD Students'],
+        ['masters student', 'Masters Students'],
+        ['undergraduate', 'Undergraduates'],
+        ['undergraduate (reu)', 'Undergraduates (REU)'],
+        ['postdoc', 'Postdocs'],
+        ['fullbright postdoc scholar', 'Fullbright Postdoc Scholars']
+      ]);
+      const groups = new Map();
+
+      people.forEach((person) => {
+        const role = (person.role || '').trim();
+        const key = role.toLowerCase();
+        if (!groups.has(key)) {
+          groups.set(key, { title: roleTitles.get(key) || role || 'Other Alumni', people: [] });
+        }
+        groups.get(key).people.push(person);
+      });
+
+      // Show known roles in academic order, followed by any new roles in the data.
+      const roleOrder = new Set([...roleTitles.keys(), ...groups.keys()]);
+      roleOrder.forEach((key) => {
+        const group = groups.get(key);
+        if (group) {
+          section.appendChild(createPeopleSection(group.title, group.people, 3));
+        }
+      });
 
       return section;
     }
@@ -149,7 +200,7 @@
       })
       .then((data) => {
         peopleList.appendChild(createPeopleSection('Current Members', data.current || []));
-        peopleList.appendChild(createPeopleSection('Alumni', data.alumni || []));
+        peopleList.appendChild(createAlumniSection(data.alumni || []));
       })
       .catch(() => {
         addText(peopleList, 'p', 'people-error', 'Team information is unavailable right now.');
