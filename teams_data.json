@@ -28,13 +28,13 @@
       "name": "Richard Douglas",
       "role": "PhD Student",
       "date": "2025-present",
-      "image": ""
+      "image": "public/team_images/douglas_richard.jpg"
     },
     {
       "name": "Rupa Ghosh",
       "role": "Masters Student",
       "date": "2025-present",
-      "image": ""
+      "image": "public/team_images/ghosh_rupa.jfif"
     },
     {
       "name": "Rafia Fayyaz",
@@ -107,13 +107,6 @@
       "date": "",
       "bio": "",
       "image": "public/team_images/nutakki_gopi.png"
-    },
-    {
-      "name": "Jaylen Jones",
-      "role": "Undergraduate (REU)",
-      "date": "Summer 2021",
-      "bio": "",
-      "image": "public/team_images/jones_jaylen.png"
     },
     {
       "name": "Mariem Boujelbene",
@@ -326,18 +319,18 @@
       "image": "public/team_images/gomez_jonathan.png"
     },
     {
-      "name": "Quyen Do",
+      "name": "Jaylen Jones",
       "role": "Undergraduate (REU)",
-      "date": "Summer 2024",
+      "date": "Summer 2021",
       "bio": "",
-      "image": ""
+      "image": "public/team_images/jones_jaylen.png"
     },
     {
-      "name": "Anitej Themma",
+      "name": "Anitej Thamma",
       "role": "Undergraduate (REU)",
       "date": "Summer 2023",
       "bio": "",
-      "image": ""
+      "image": "public/team_images/thamma_anitej.jfif"
     },
     {
       "name": "Keenrruy Murillo",
@@ -345,6 +338,13 @@
       "date": "Summer 2023",
       "bio": "",
       "image": "public/team_images/murillo_keenrruy.jpg"
+    },
+    {
+      "name": "Emma Do",
+      "role": "Undergraduate (REU)",
+      "date": "Summer 2024",
+      "bio": "",
+      "image": "public/team_images/do_emma.jpg"
     },
     {
       "name": "Jamie Livers",
@@ -361,11 +361,11 @@
       "image": ""
     },
     {
-      "name": "Garrett McNeil",
+      "name": "Garrett McNeill",
       "role": "Undergraduate (REU)",
       "date": "Summer 2026",
       "bio": "",
-      "image": ""
+      "image": "public/team_images/mcneill_garrett.jfif"
     }
   ]
 }
